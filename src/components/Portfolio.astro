@@ -1,0 +1,61 @@
+---
+const timeline = [
+	{ year: '2024', title: 'Add Your Event or Venue Name', location: 'City, Country' },
+	{ year: '2024', title: 'Add Your Event or Venue Name', location: 'City, Country' },
+	{ year: '2023', title: 'Add Your Event or Venue Name', location: 'City, Country' },
+	{ year: '2023', title: 'Add Your Event or Venue Name', location: 'City, Country' },
+];
+
+const sets = [
+	{ title: 'Live Set 001 — Afro House / Tech House', platform: 'SoundCloud' },
+	{ title: 'Live Set 002 — Techno / Progressive House', platform: 'Mixcloud' },
+	{ title: 'Live Set 003 — Hip-Hop / R&B', platform: 'SoundCloud' },
+];
+---
+
+<section id="portfolio" class="bg-ink py-24">
+	<div class="mx-auto max-w-6xl px-6">
+		<span class="text-xs font-semibold tracking-[0.3em] text-accent-3 uppercase">Portfolio</span>
+		<h2 class="mt-3 font-display text-4xl text-white uppercase sm:text-5xl">History &amp; Live Sets</h2>
+
+		<div class="mt-16 grid gap-16 lg:grid-cols-2">
+			<div>
+				<h3 class="text-sm font-semibold tracking-wider text-zinc-400 uppercase">Event History</h3>
+				<!-- TODO: replace with real gig history (dates, venues, cities) -->
+				<ol class="mt-6 space-y-8 border-l border-white/10 pl-6">
+					{
+						timeline.map((item) => (
+							<li class="relative">
+								<span class="absolute top-1 -left-[27px] h-3 w-3 rounded-full border-2 border-ink bg-accent" />
+								<span class="text-xs font-semibold tracking-wider text-accent-3 uppercase">{item.year}</span>
+								<p class="mt-1 font-display text-lg text-white uppercase">{item.title}</p>
+								<p class="text-sm text-zinc-400">{item.location}</p>
+							</li>
+						))
+					}
+				</ol>
+			</div>
+
+			<div>
+				<h3 class="text-sm font-semibold tracking-wider text-zinc-400 uppercase">Latest Sets</h3>
+				<!-- TODO: replace with real SoundCloud / Mixcloud embeds or links -->
+				<div class="mt-6 space-y-4">
+					{
+						sets.map((set) => (
+							<a
+								href="#"
+								class="group flex items-center justify-between rounded-xl border border-white/10 bg-surface/60 px-6 py-5 transition hover:border-accent/50"
+							>
+								<div>
+									<p class="font-medium text-white">{set.title}</p>
+									<p class="text-sm text-zinc-400">{set.platform}</p>
+								</div>
+								<span class="text-zinc-500 transition group-hover:translate-x-1 group-hover:text-accent">→</span>
+							</a>
+						))
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

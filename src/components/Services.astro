@@ -1,0 +1,53 @@
+---
+import Icon from './Icon.astro';
+
+const services: { title: string; description: string; icon: 'club' | 'stage' | 'diamond' | 'radio' }[] = [
+	{
+		title: 'Club Gigs & Nightlife',
+		description:
+			"Club nights are where DJ MAC's range comes alive — deep, rolling Tech House grooves for the peak-hour crowd, flipped into explosive Hip-Hop and R&B sets that keep the energy raw and the room packed. Every set is curated live, built around the crowd in front of the decks.",
+		icon: 'club',
+	},
+	{
+		title: 'Festivals & Large Stages',
+		description:
+			"On the big stage, DJ MAC brings the firepower — driving Techno, soaring Progressive House builds, and anthemic Dance tracks engineered to move thousands at once. It's a set built for scale: wide, loud, and relentless from the first drop to the last.",
+		icon: 'stage',
+	},
+	{
+		title: 'Premium Private & Corporate Events',
+		description:
+			'For private and corporate events, DJ MAC delivers a tailored, high-end experience — sophisticated Afro House rhythms woven seamlessly with mainstream hits that keep every guest locked in. Every set list is custom-built to match the room, the brand, and the occasion.',
+		icon: 'diamond',
+	},
+	{
+		title: 'Radio, Mixes & Podcasts',
+		description:
+			'Beyond the booth, DJ MAC curates guest mixes, radio sets, and continuous mixtapes that distill the genre-bending sound into a single listen — available on SoundCloud and Mixcloud as a standing invitation to hear the versatility firsthand.',
+		icon: 'radio',
+	},
+];
+---
+
+<section id="services" class="bg-surface/40 py-24">
+	<div class="mx-auto max-w-6xl px-6">
+		<div class="max-w-2xl">
+			<span class="text-xs font-semibold tracking-[0.3em] text-accent-3 uppercase">What I Do</span>
+			<h2 class="mt-3 font-display text-4xl text-white uppercase sm:text-5xl">Built for Every Room</h2>
+		</div>
+
+		<div class="mt-14 grid gap-6 sm:grid-cols-2">
+			{
+				services.map((service) => (
+					<div class="group rounded-2xl border border-white/10 bg-ink/60 p-8 transition hover:border-accent/50">
+						<div class="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-white/5 text-accent-3 transition group-hover:bg-accent/10 group-hover:text-accent">
+							<Icon name={service.icon} />
+						</div>
+						<h3 class="font-display text-xl text-white uppercase">{service.title}</h3>
+						<p class="mt-3 text-sm leading-relaxed text-zinc-400 sm:text-base">{service.description}</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>

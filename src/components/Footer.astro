@@ -1,0 +1,31 @@
+---
+const socials = [
+	{ label: 'Instagram', href: '#' },
+	{ label: 'SoundCloud', href: '#' },
+	{ label: 'Mixcloud', href: '#' },
+	{ label: 'YouTube', href: '#' },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/10 bg-ink py-10">
+	<div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 sm:flex-row">
+		<a href="#hero" class="font-display text-lg tracking-widest text-white">
+			DJ<span class="text-gradient">MAC</span>
+		</a>
+
+		<!-- TODO: replace with real social profile links -->
+		<nav class="flex gap-6">
+			{
+				socials.map((social) => (
+					<a href={social.href} class="text-sm font-medium tracking-wider text-zinc-400 uppercase transition hover:text-white">
+						{social.label}
+					</a>
+				))
+			}
+		</nav>
+
+		<p class="text-xs text-zinc-500">© {year} DJ MAC. All rights reserved.</p>
+	</div>
+</footer>

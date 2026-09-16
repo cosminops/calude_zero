@@ -3,9 +3,13 @@ import '../styles/global.css';
 
 interface Props {
 	title?: string;
+	description?: string;
 }
 
-const { title = 'djmac.eu' } = Astro.props;
+const {
+	title = 'DJ MAC | Professional DJ',
+	description = 'DJ MAC is a genre-fluid selector blending Afro House, Tech House, Techno, Hip-Hop, R&B and more into one unforgettable set.',
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -15,9 +19,16 @@ const { title = 'djmac.eu' } = Astro.props;
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-ink font-sans text-white antialiased selection:bg-accent selection:text-ink">
 		<slot />
 	</body>
 </html>

@@ -1,7 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Services from '../components/Services.astro';
+import Portfolio from '../components/Portfolio.astro';
+import Booking from '../components/Booking.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Astro">
-	<h1 class="text-3xl font-bold underline">Astro</h1>
+<Layout
+	title="DJ MAC | Afro House, Tech House, Techno & Urban Sounds"
+	description="DJ MAC is a genre-fluid selector blending Afro House, Tech House, Progressive House, Techno, Dance, Hip-Hop, R&B and Moombahton into one unforgettable set. Available for clubs, festivals, and private events worldwide."
+>
+	<Header />
+	<Hero />
+	<About />
+	<Services />
+	<Portfolio />
+	<Booking />
+	<Footer />
 </Layout>

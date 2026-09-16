@@ -1,0 +1,78 @@
+---
+---
+
+<section id="booking" class="relative overflow-hidden bg-surface/40 py-24">
+	<div class="pointer-events-none absolute inset-0">
+		<div class="absolute top-0 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full bg-accent/20 blur-[140px]"></div>
+	</div>
+
+	<div class="relative mx-auto max-w-3xl px-6 text-center">
+		<span class="text-xs font-semibold tracking-[0.3em] text-accent-3 uppercase">Booking</span>
+		<h2 class="mt-3 font-display text-4xl text-white uppercase sm:text-5xl">Let's Fill the Floor</h2>
+
+		<p class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-zinc-300 sm:text-lg">
+			DJ MAC is available for club residencies, festival slots, and private bookings worldwide. If
+			you're building a lineup that needs an artist who can move fluidly between rooms, genres, and
+			moods — let's talk.
+		</p>
+
+		<p class="mx-auto mt-4 max-w-xl font-medium text-white">
+			Dates are limited and booking fast — reach out now to lock in DJ MAC for your next event.
+		</p>
+
+		<div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+			<!-- TODO: confirm the booking email address -->
+			<a
+				href="mailto:booking@djmac.eu"
+				class="rounded-full bg-accent px-8 py-3 text-sm font-semibold tracking-wider text-white uppercase shadow-lg shadow-accent/30 transition hover:bg-accent-2"
+			>
+				booking@djmac.eu
+			</a>
+		</div>
+
+		<!-- TODO: wire this form to a form backend (e.g. Formspree) since the site is static-only -->
+		<form class="mx-auto mt-16 grid max-w-xl gap-4 text-left sm:grid-cols-2">
+			<div class="sm:col-span-1">
+				<label for="name" class="text-xs font-semibold tracking-wider text-zinc-400 uppercase">Name</label>
+				<input
+					id="name"
+					name="name"
+					type="text"
+					required
+					class="mt-2 w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-white placeholder:text-zinc-500 focus:border-accent focus:outline-none"
+					placeholder="Your name"
+				/>
+			</div>
+			<div class="sm:col-span-1">
+				<label for="email" class="text-xs font-semibold tracking-wider text-zinc-400 uppercase">Email</label>
+				<input
+					id="email"
+					name="email"
+					type="email"
+					required
+					class="mt-2 w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-white placeholder:text-zinc-500 focus:border-accent focus:outline-none"
+					placeholder="you@example.com"
+				/>
+			</div>
+			<div class="sm:col-span-2">
+				<label for="event" class="text-xs font-semibold tracking-wider text-zinc-400 uppercase">Event Details</label>
+				<textarea
+					id="event"
+					name="event"
+					rows="4"
+					required
+					class="mt-2 w-full rounded-lg border border-white/10 bg-ink px-4 py-3 text-white placeholder:text-zinc-500 focus:border-accent focus:outline-none"
+					placeholder="Date, venue, event type, and any details that help me curate the perfect set."
+				></textarea>
+			</div>
+			<div class="sm:col-span-2">
+				<button
+					type="submit"
+					class="w-full rounded-full bg-accent px-8 py-3 text-sm font-semibold tracking-wider text-white uppercase transition hover:bg-accent-2"
+				>
+					Send Booking Request
+				</button>
+			</div>
+		</form>
+	</div>
+</section>

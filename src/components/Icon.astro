@@ -1,0 +1,45 @@
+---
+interface Props {
+	name: 'club' | 'stage' | 'diamond' | 'radio';
+}
+
+const { name } = Astro.props;
+---
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 24 24"
+	fill="none"
+	stroke="currentColor"
+	stroke-width="1.75"
+	stroke-linecap="round"
+	stroke-linejoin="round"
+	class="h-6 w-6"
+>
+	{
+		name === 'club' && (
+			<>
+				<path d="M4 13v-1a8 8 0 0116 0v1" />
+				<rect x="2.5" y="13" width="4" height="6" rx="1.5" />
+				<rect x="17.5" y="13" width="4" height="6" rx="1.5" />
+			</>
+		)
+	}
+	{name === 'stage' && <path d="M3 19l6-10 4 6 3-4 5 8H3z" />}
+	{
+		name === 'diamond' && (
+			<>
+				<path d="M4 9l4-5h8l4 5-8 11-8-11z" />
+				<path d="M4 9h16M9.5 4L12 9l2.5-5M8 9l4 11 4-11" />
+			</>
+		)
+	}
+	{
+		name === 'radio' && (
+			<>
+				<circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none" />
+				<path d="M8.5 15.5a5 5 0 010-7M15.5 15.5a5 5 0 000-7M5.5 18.5a9 9 0 010-13M18.5 18.5a9 9 0 000-13" />
+			</>
+		)
+	}
+</svg>
